@@ -18,7 +18,7 @@ export class LoginPage {
     getErrorBox(){
         return element(by.id('error'));
     }
-    getCurrentUrl(){
-        return window.location.pathname;
+    getPageTitleText() {
+        return element(by.css('app-root p')).getText();
     }
 }
