@@ -1,0 +1,16 @@
+<div class="login">
+    <h2>Login</h2>
+    <form [formGroup]="loginForm">
+        <div class="margin10">
+            <label>Username:</label>
+            <input  class="margin10" type="text" id="username" formControlName="userName" maxlength="50" />
+            <span></span>
+        </div>
+        <div  class="margin10">
+            <label>Password:</label>
+            <input  class="margin10" type="password" id="password" formControlName="password" maxlength="30" />
+        </div>
+        <button (click)="onSubmit()" id="login" [disabled]="loginForm.invalid">Login</button>
+        <span id="error" class="error margin10" *ngIf="!loginSuccess">{{errorMsg}}</span>
+    </form>
+</div>
