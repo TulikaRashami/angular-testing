@@ -37,7 +37,7 @@ describe('Login tests', () => {
         page.getPasswordTextbox().sendKeys(validUser.password);
         let button = page.getButton();
         button.click();
-        expect(page.getCurrentUrl()).toEqual('/dashboard');
+        expect(page.getPageTitleText()).toEqual('Login Successful!');
     });
 
 });
